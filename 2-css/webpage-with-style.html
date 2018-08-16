@@ -1,0 +1,182 @@
+<html>
+    <head>
+        <title>Webpage with Style</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
+        <style type="text/css">
+            .red {
+                color: red;
+            }
+
+            .large {
+                font-size: 200%;
+            }
+
+            #green{
+                color: green;
+            }
+
+            .underline{
+                text-decoration: underline
+            }
+
+            #first-section{
+                background-color: #4076ce;
+                color: white;
+                font-size: 150%;
+                width: 300px;
+
+                /* Padding = margin inside object */
+                padding: 5px 5px 5px 5px;
+
+                /* margin: 100px 80px 60px 40px; */
+                
+                /* position: fixed; */
+
+                /* position: absolute;
+                left: 500px; */
+                
+                /* position: relative;
+                z-index: 2;
+                left: 100px;
+                top:60px; */
+
+                /* opacity: 0.9; */
+
+                /* float:left */
+            }
+
+            #second-section{
+                background-color: #6fbcd3;
+                color: #000000;
+                width: 300px;
+                height: 200px;
+
+                /* position: relative;
+                left: 10px;
+                top:20px; */
+
+                /*float: right;*/
+            }
+
+            .square{
+                width: 100px;
+                height: 100px;
+                margin: 10px;
+                float: left;
+            }
+
+            #square-1{
+                background-color: red;
+                border: 10px black solid;
+            }
+
+            #square-2{
+                background-color: blue;
+                border-style: ridge solid dotted dashed;
+                border-width: 10px 5px 2px 10px;
+                border-color: green yellow blue white;
+            }
+
+            #square-3{
+                background-color: green;
+                border-radius: 50%;
+            }            
+
+            .clear-float{
+                clear: both;
+            }
+
+            body{
+                margin: 0;
+                padding: 0;
+            }
+            p{
+                margin: 0;
+                padding: 0;
+                font-family: 'Roboto', sans-serif;
+                
+            }
+            .text-style{
+                font-weight: bold;
+            }
+
+            .bold{
+                font-weight: bold;
+            }
+
+            .italic{
+                font-style: italic;
+            }
+
+            .underline{
+                text-decoration: none;
+            }
+
+            a{
+                text-decoration: none;
+                color: rgb(70, 70, 172);
+                font-family: 'Roboto', sans-serif;
+               
+            }
+
+            a:hover{
+                text-decoration: underline;
+                color:green;
+            }
+
+            a:visited{
+                color: rgb(136, 74, 136);
+            }
+
+            .centered{
+                text-align: center;
+            }
+
+            #topbar-section{
+
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div id="first-section">
+            <p>Texto teste.</p>
+        </div>
+
+        <div id="second-section">
+            <p class="red large">Essa frase é azul.</p>
+            <p class="large">Essa frase é azul.</p>
+            <p id="green" class="large">Aqui tem mais texto. 
+                <span class="red underline">E esse aqui tá cagado.</span></p>
+        </div>
+
+        <div id="square-1" class="square">
+
+        </div>
+
+        <div id="square-2" class="square">
+            
+        </div>
+
+        <div id="square-3" class="square">
+            
+        </div>
+
+        <div class="clear-float">
+            <p>This paragraph is not floated.</p>
+        </div>
+
+
+
+        <p class="text-style">This is some text:</p>
+        <p class="centered">
+            <span class="underline">Underline</span>
+            <span class="bold">Bold</span>
+            <span class="italic">Italic</span>
+        </p>
+
+        <a href="https://www.google.com" target="_blank">Google!</a>
+    </body>
+</html>
