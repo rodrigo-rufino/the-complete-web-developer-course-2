@@ -6,11 +6,43 @@
     <body>
 
         <p id="text">Hello World!</p>
-
-        <button onclick="">Click Me!</button>
         
+        <button id="myButton" onclick="">Click Me!</button>
+        
+        <p id="moreText">This is some text</p>
+
+        <button id="styleText">Style Text</button>
+        <br><br>
+        <input id="textInput" type="text">
+        <button id="changeText">Change the Text!</button>
+
         <script type="text/javascript">
-            document.getElementById("text");
+            // Button Click
+            document.getElementById("myButton").onclick = function(){
+                document.getElementById("text").innerHTML = 
+                    document.getElementById("text").innerHTML + " Hi hi!";
+            }
+            //  Style Change
+            document.getElementById("styleText").onclick = function(){
+                document.getElementById("moreText").style.fontSize = "50px";
+            }
+            
+            // Variable value to text;
+            document.getElementById("changeText").onclick = function(){
+                var textEntered = "";
+                textEntered = document.getElementById("textInput").value;
+                document.getElementById("text").innerHTML = textEntered;
+            }
+            
+            var myArray = new Array();
+            myArray[0] = 0;
+            myArray[1] = 1;
+            myArray[2] = 2;
+            myArray[3] = 3;
+
+            console.log(myArray);
+
         </script>
+
     </body>
 </html>
