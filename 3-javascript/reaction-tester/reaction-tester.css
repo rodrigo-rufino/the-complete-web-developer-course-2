@@ -1,0 +1,12 @@
+p{
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+#shape{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    display: none;
+    border-radius: 50%;
+}

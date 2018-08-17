@@ -15,7 +15,7 @@
         <br><br>
         <input id="textInput" type="text">
         <button id="changeText">Change the Text!</button>
-
+        <div id="stringsDiv"></div>
         <script type="text/javascript">
             // Button Click
             document.getElementById("myButton").onclick = function(){
@@ -34,13 +34,74 @@
                 document.getElementById("text").innerHTML = textEntered;
             }
             
+            
+            /* //Arrays 
+
             var myArray = new Array();
             myArray[0] = 0;
             myArray[1] = 1;
             myArray[2] = 2;
             myArray[3] = 3;
 
-            console.log(myArray);
+            var texts = ["Um", "Dois", "Tres"];
+            texts.push("Bleh");
+            console.log(texts);
+
+            texts.splice(2, 1);
+            console.log(texts);
+
+            texts.splice(2, 0, "BLOBLOH");
+            console.log(texts);
+
+            texts.splice(2, 1, "HYAAAAAHE");
+            console.log(texts);
+            */
+
+
+
+            /* //if
+            var x = 1;
+            if (x==1){
+
+            } else {
+
+            }
+
+            var randomNumber = Math.random;
+            randomNumber = randomNumber*6;
+            randomNumber = Math.floor(randomNumber);
+            */
+
+
+
+            /* //For
+            var string = "";
+            var strings = ["A", "B", "C", "D", "E"];
+
+            for (var i = 0; i < strings.length; i++){
+                string = string + "<p>" + strings[i] + "</p>";
+                console.log("i");
+            }
+            */
+
+
+            /* //While 
+            var string = "";
+            var strings = ["A", "B", "C", "D", "E"];
+            var i = 0;
+            while (i<strings.length){
+                string = string + "<p>" + strings[i] + "</p>";
+                i++;
+            }
+            document.getElementById("stringsDiv").innerHTML = string;
+            */
+
+
+            /* // Function 
+            function alertMe(){
+                alert("hi hi!");
+            }
+            */
 
         </script>
 
