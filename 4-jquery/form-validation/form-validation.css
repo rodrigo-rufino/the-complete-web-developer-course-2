@@ -1,0 +1,53 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 150%;
+}
+
+input{
+    font-size: 25px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    width: 320px;
+}
+
+label{
+    position: relative;
+    top: 5px;
+    width: 200px;
+    float: left;
+}
+
+#wrapper{
+    width: 520px;
+    margin: 0 auto;
+}
+
+.form-element{
+    margin-bottom: 10px;
+}
+
+#submit-button{
+    float: right;
+    width: 150px;
+}
+
+#submit-button:hover{
+    float: right;
+    width: 150px;
+    color:white;
+    background-color: #323c9b;
+}
+
+#error-message{
+    color: #e91313;
+    font-size: 50%;
+    float: left;
+}
+
+#success-message{
+    color: #16c92e;
+    font-size: 50%;
+    float: left;
+    display: none;
+}
