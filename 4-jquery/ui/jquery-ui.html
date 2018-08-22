@@ -4,12 +4,65 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="jquery-ui/jquery-ui.js"></script>
         <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="jquery-ui.css"></style>
     </head>
 
     <body>
-        <div id="draggable">Drag me!</div>
-        <script type="text/javascript">
-            $("#draggable").draggable();
-        </script>
+        <div id="container">
+            <div id="draggable">Drag me!</div>
+        </div>
+        <div id="resizable"></div>
+
+        <div id="draggable2">Draggable</div>
+        <div id="droppable">
+            <p>Drop here!</p>
+        </div>
+
+        <div id="accordion">
+            <h3>Section 1</h3>
+            <div>
+                <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+                    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+                    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+                    odio.
+                </p>
+            </div>
+            <h3>Section 2</h3>
+            <div>
+                <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+                    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+                    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+                    odio.
+                </p>
+            </div>
+            <h3>Section 3</h3>
+            <div>
+                <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+                    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+                    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+                    odio.
+                </p>
+            </div>
+            <h3>Section 4</h3>
+            <div>
+                <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+                    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+                    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+                    odio.
+                </p>
+            </div>
+        </div>
+
+        <ul id="sortable" style="list-style-type: none;">
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
+        </ul>
+
+        <script type="text/javascript" src="jquery-ui.js"></script>
     </body>
 </html>
