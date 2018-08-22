@@ -1,0 +1,215 @@
+<html>
+    <head>
+        <title>
+            Code Player
+        </title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <style type="text/css"> 
+
+            body{
+                margin: 0;
+                border: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            #topbar{
+                margin: 0 auto;
+                width: 100%;
+                background-color: #EDEDED;
+                height: 40px;
+                border-bottom: 1px solid #b1b1b1;            
+                padding:0;
+            }
+            
+            #buttonContainer{
+                margin: 0 auto;
+                width: 250px;
+                padding:0;
+                
+            }
+
+            .toggleButton{
+                margin-top: 5px; 
+                padding: 5px;
+                float: left;
+                border: 1px solid #c9c9c9;
+                border-right: none;
+            }
+
+            #logo{
+                float: left;
+                font-weight: bold;
+                font-size: 150%;
+                margin: 5px 60px 5px 5px;
+            }
+
+            #htmlButton{
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;    
+            }
+
+            #cssButton{
+
+            }
+            
+            #jsButton{
+
+            }
+
+            #outputButton{
+                border-right: 1px solid #c9c9c9;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;    
+            }
+
+            .clear{
+                clear:both;
+            }
+
+            #sectionContainer{
+                margin: 0 auto;
+                width: 100%;
+            }
+
+            .section{
+                width: 25%;
+                height: 715px;
+                float: left;
+                margin-left:-1px;
+                border-left: 1px solid #c9c9c9;
+                padding-right: 3px;
+            }
+
+            .sectionInput{
+                text-align: left;
+                height: 100%;
+                width: 100%;
+            }
+
+            .highlightedButton{
+                background-color: #c9c9c9;
+            }
+
+            .active{
+                background-color: #d5def1;
+            }
+
+            textarea{
+                overflow-x: scroll;
+                /* overflow-y: scroll; */
+                resize: none;
+                white-space: nowrap;
+                border: none;
+            }
+
+            iframe{
+                border: none;
+            }
+
+            h4{
+                margin-left: 5px;
+                color: #5288ce;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div id="topbar">
+            <div id="logo">
+                CodePlayer
+            </div>
+
+            <div id="buttonContainer">
+                <div class="toggleButton active" id="htmlButton">HTML</div>
+                <div class="toggleButton" id="cssButton">CSS</div>
+                <div class="toggleButton" id="jsButton">JavaScript</div>
+                <div class="toggleButton active" id="outputButton">Output</div>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+
+        <div id="sectionsContainer">
+                <div class="section" id="htmlSection">
+                    <h4>HTML</h4>
+                    <textarea class="sectionInput" id="htmlTextarea" type="text"><p id="paragraph">AA</p>
+                    </textarea>
+                </div>
+                <div class="section" id="cssSection" style="display: none;">
+                    <h4>CSS</h4>
+                    <textarea class="sectionInput" id="cssTextarea" type="text">p{color: green;}</textarea>
+                </div>
+                <div class="section" id="jsSection" style="display: none;">
+                    <h4>JavaScript</h4>
+                    <textarea class="sectionInput" id="jssTextarea" type="text">document.getElementById("paragraph").innerHTML = "OKKKKK!";
+                    </textarea>
+                </div>
+                <div class="section" id="outputSection">
+                    <h4>Output</h4>
+                    <iframe class="sectionInput" id="outputIframe" type="text"></iframe>
+                </div>
+        </div>
+
+        
+        <script type="text/javascript">
+
+            setSectionsWidth($('.section:visible').length);
+            setIframeHTML();
+
+            $("textarea").height($(window).height() - $("#topbar").height() - $("h4").height() - 50);
+
+            $(".toggleButton").hover(function(){
+                // Hover on
+                $(this).addClass("highlightedButton");
+            }, function(){
+                // Hover out
+                $(this).removeClass("highlightedButton");
+            });
+
+            $(".toggleButton").click(function(){
+
+                $(this).toggleClass("active");
+                var thisId = $(this).attr("id");
+
+                if(thisId == "htmlButton"){
+                    console.log("htmlButton");
+                    $("#htmlSection").toggle();
+                } else if(thisId == "cssButton"){
+                    console.log("cssButton");
+                    $("#cssSection").toggle();
+                } else if(thisId == "jsButton"){
+                    console.log("jsButton");
+                    $("#jsSection").toggle();
+                } else if(thisId == "outputButton"){
+                    $("#outputSection").toggle();
+                    console.log("outputButton");
+                }
+
+                console.log($('.section:visible').length);
+                setSectionsWidth($('.section:visible').length);
+            });
+
+            $("textarea").on("change keyup paste", function(){
+                setIframeHTML();
+            });
+
+            function setSectionsWidth(activeSections){
+                $(".section").width(($(window).width()/activeSections) - 12);
+            }
+
+            function setIframeHTML(){
+                $("iframe").contents().find("html").html("<html><head><style>" +
+                    $("#cssTextarea").val() +
+                    "</style></head><body>" + 
+                    $("#htmlTextarea").val() +   
+                    "</body></html>");
+
+                document.getElementById("outputIframe").contentWindow.eval($("#jssTextarea").val());
+            }
+
+        </script>
+    </body>
+</html>
