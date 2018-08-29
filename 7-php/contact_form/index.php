@@ -95,8 +95,6 @@
     <script type="text/javascript">
 
       $("form").submit(function(e){
-        e.preventDefault();
-
         var error = "";
 
         if($("#email").val() == ""){
@@ -117,8 +115,9 @@
           '<button type="button" class="close" data-dismiss="alert" aria-label="Close">\
           <span aria-hidden="true">&times;</span></button></div>'
           );
+          return false;
         } else {
-          $("form").unbind("submit").submit();
+          return true;
         }
       });
 
