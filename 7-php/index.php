@@ -63,6 +63,12 @@
     print_r($myArray);
 
     
+    // Include
+    include("includedfile.php");
+    echo file_get_contents("http...");
+
+
+
 
     // GET Variables
 

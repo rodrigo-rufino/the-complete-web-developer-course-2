@@ -120,9 +120,6 @@
           return true;
         }
       });
-
-      
-
       
     </script>
   </body>
